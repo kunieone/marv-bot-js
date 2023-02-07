@@ -25,6 +25,6 @@ export class MarvBot {
     this.memory += input + "\n";
     let reply = await getResponse(this.memory);
     this.memory += reply + "\n";
-    return reply["choices"][0]["text"];
+    return reply["data"]["choices"][0]["text"];
   }
 }
